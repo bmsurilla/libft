@@ -4,13 +4,9 @@ char	*ft_strjoin(char const *s1, char const *s2)
 {
 	int	i;
 	int a;
-	int	len1;
-	int	len2;
 	char	*join;
 	
-	len1 = ft_strlen(s1);
-	len2 = ft_strlen(s2);
-	join = malloc (len1 + len2 + 1);
+	join = malloc (ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (!join)
 		return (NULL);
 	i = 0;
@@ -28,7 +24,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	join[i + a] = '\0';
 	return (join);
 }
-/*
+
 #include <stdio.h>
 int	main(void)
 {
@@ -36,4 +32,3 @@ int	main(void)
 	char s2[] = " Bob";
 	printf("%s\n",ft_strjoin(s1,s2));
 }
-*/
