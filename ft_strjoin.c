@@ -29,6 +29,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 int	main(void)
 {
 	char s1[] = "Hello,";
-	char s2[] = " Bob";
+	char s2[] = " Bobert";
 	printf("%s\n",ft_strjoin(s1,s2));
 }
