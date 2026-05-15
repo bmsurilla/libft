@@ -6,7 +6,7 @@
 /*   By: bsurilla <bsurilla@student.42vienna.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/06 22:08:22 by bsurilla          #+#    #+#             */
-/*   Updated: 2026/05/06 23:09:21 by bsurilla         ###   ########.fr       */
+/*   Updated: 2026/05/15 16:13:31 by bsurilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 	psrc = (unsigned char *)src;
 	pdest = (unsigned char *)dest;
-	if (pdest < psrc)
+	if ((size_t)pdest < (size_t)psrc)
 	{
 		i = 0;
 		while (i < n)

@@ -6,7 +6,7 @@
 /*   By: bsurilla <bsurilla@student.42vienna.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 19:00:55 by bsurilla          #+#    #+#             */
-/*   Updated: 2026/04/30 19:50:40 by bsurilla         ###   ########.fr       */
+/*   Updated: 2026/05/15 16:09:25 by bsurilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *nptr)
 {
-	int	i;
-	int	sign;
-	int	digit;
+	int			i;
+	int			sign;
+	long long	digit;
 
 	i = 0;
 	while (nptr[i] != 0 && (nptr[i] == 32 || (nptr[i] <= 13 && nptr[i] >= 9)))
