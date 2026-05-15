@@ -6,7 +6,7 @@
 /*   By: bsurilla <bsurilla@student.42vienna.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/15 16:07:10 by bsurilla          #+#    #+#             */
-/*   Updated: 2026/05/15 16:07:24 by bsurilla         ###   ########.fr       */
+/*   Updated: 2026/05/15 18:59:59 by bsurilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int	i;
-	int a;
+	int		i;
+	int		a;
 	char	*join;
-	
+
 	join = malloc (ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (!join)
 		return (NULL);
@@ -36,7 +36,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	join[i + a] = '\0';
 	return (join);
 }
-
+/*
 #include <stdio.h>
 int	main(void)
 {
@@ -44,3 +44,4 @@ int	main(void)
 	char s2[] = " Bobert";
 	printf("%s\n",ft_strjoin(s1,s2));
 }
+*/

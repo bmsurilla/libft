@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bsurilla <bsurilla@student.42vienna.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/15 16:06:30 by bsurilla          #+#    #+#             */
-/*   Updated: 2026/05/15 18:58:33 by bsurilla         ###   ########.fr       */
+/*   Created: 2026/05/15 19:02:00 by bsurilla          #+#    #+#             */
+/*   Updated: 2026/05/15 19:14:08 by bsurilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-	write(fd, &c, 1);
+	while (*s != '\0')
+	{
+		write(fd, s, 1);
+		s++;
+	}
 }
-
-// int main (void)
-// {
-//     ft_putchar_fd('~',1);
-// }
+/*
+int	main (void)
+{
+	char *str;
+	str = "yellow!";
+	ft_putstr_fd(str,1);
+}
+*/

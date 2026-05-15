@@ -1,23 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bsurilla <bsurilla@student.42vienna.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/15 16:06:30 by bsurilla          #+#    #+#             */
-/*   Updated: 2026/05/15 18:58:33 by bsurilla         ###   ########.fr       */
+/*   Created: 2026/05/15 20:24:49 by bsurilla          #+#    #+#             */
+/*   Updated: 2026/05/15 20:34:00 by bsurilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
-	write(fd, &c, 1);
-}
+	long	nb;
+	char	digit;
 
-// int main (void)
-// {
-//     ft_putchar_fd('~',1);
-// }
+	nb = n;
+	if (nb < 0)
+	{
+		write(1, "-", 1);
+		nb = nb *(-1);
+	}
+	if (nb >= 10)
+		ft_putnbr_fd(nb / 10, 1);
+	digit = n % 10 + '0';
+	write(fd, &digit, 1);
+}
+/*
+int	main(void)
+{
+	ft_putnbr_fd(1134,1);
+}
+*/
