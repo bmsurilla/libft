@@ -28,13 +28,24 @@ static int	ft_setcheck(char const *set, char c)
 	return (0);
 }
 
-
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		i;
 	int		b;
 	int 	s;
 	char	*trimmed;
-	int		slen;
+	int		len;
+
+	len = ft_strlen(s1);
+	i = 0;
+	while (s1[i] != 0 && ft_setcheck(set, s1[i]) == 1)
+	{
+		i++;
+	}
+	b = len - 1;
+	while (ft_setcheck(set, s1[b]) == 1 && b >= 0)
+	{
+		b--;
+	}
 
 }
