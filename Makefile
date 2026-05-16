@@ -6,7 +6,7 @@ n# **************************************************************************** 
 #    By: bsurilla <bsurilla@student.42vienna.c      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/04/30 20:33:41 by bsurilla          #+#    #+#              #
-#    Updated: 2026/05/15 20:31:07 by bsurilla         ###   ########.fr        #
+#    Updated: 2026/05/16 18:29:50 by bsurilla         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,6 +40,7 @@ SRC = ft_atoi.c \
 	  ft_putchar_fd.c \
 	  ft_putstr_fd.c \
 	  ft_putnbr_fd.c \
+	  ft_strtrim.c \
 
 OBJ = $(SRC: .c=.o)
 

@@ -6,7 +6,7 @@
 /*   By: bsurilla <bsurilla@student.42vienna.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/15 20:40:10 by bsurilla          #+#    #+#             */
-/*   Updated: 2026/05/15 21:47:48 by bsurilla         ###   ########.fr       */
+/*   Updated: 2026/05/16 18:28:30 by bsurilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 static int	ft_setcheck(char const *set, char c)
 {
-	int f;
-	
+	int	f;
+
 	f = 0;
 	while (set[f] != 0)
 	{
-		if (s1 == set[f])
+		if (c == set[f])
 		{
-			return(1);
+			return (1);
 		}
 		f++;
 	}
@@ -32,9 +32,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		i;
 	int		b;
-	int 	s;
 	char	*trimmed;
 	int		len;
+	int		tlen;
 
 	len = ft_strlen(s1);
 	i = 0;
@@ -43,9 +43,24 @@ char	*ft_strtrim(char const *s1, char const *set)
 		i++;
 	}
 	b = len - 1;
-	while (ft_setcheck(set, s1[b]) == 1 && b >= 0)
+	while (b >= 0 && ft_setcheck(set, s1[b]) == 1)
 	{
 		b--;
 	}
-
+	if (b < i)
+		tlen = 0;
+	else
+		tlen = b - i + 1;
+	trimmed = ft_substr (s1, i, tlen);
+	return (trimmed);
 }
+/*
+#include <stdio.h>
+int	main(void)
+{
+	char	str[] = "abbaca";
+	char	set[] = "abc";
+	
+	printf("trimmed str: %s\n",ft_strtrim(str,set));
+}
+*/

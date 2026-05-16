@@ -6,7 +6,7 @@
 /*   By: bsurilla <bsurilla@student.42vienna.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 16:02:20 by bsurilla          #+#    #+#             */
-/*   Updated: 2026/05/15 20:30:37 by bsurilla         ###   ########.fr       */
+/*   Updated: 2026/05/16 18:29:32 by bsurilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,6 @@ char	*ft_strjoin(char const *s1, char const *s2);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+char	*ft_strtrim(char const *s1, char const *set);
 
 #endif
