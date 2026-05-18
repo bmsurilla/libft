@@ -6,7 +6,7 @@
 /*   By: bsurilla <bsurilla@student.42vienna.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/04 19:40:49 by bsurilla          #+#    #+#             */
-/*   Updated: 2026/05/06 20:52:44 by bsurilla         ###   ########.fr       */
+/*   Updated: 2026/05/18 19:05:05 by bsurilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,9 +48,10 @@ int main (void)
 	char    ft_src[] = "-child";
     size_t  ft_size;
 
-	ft_size = 2;
-	size = 2;
+	ft_size = 3;
+	size = 3;
 	printf("full string: %s%s\n", dst,src);
+
 	printf("how many bytes: %zu\n",ft_strlcat(ft_dst,ft_src,ft_size));
 	printf("actual function: %zu\n", strlcat(dst,src,size));
 }

@@ -6,7 +6,7 @@
 /*   By: bsurilla <bsurilla@student.42vienna.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/16 18:35:02 by bsurilla          #+#    #+#             */
-/*   Updated: 2026/05/16 18:36:41 by bsurilla         ###   ########.fr       */
+/*   Updated: 2026/05/18 19:06:47 by bsurilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,5 @@
 
 char	**ft_split(char const *s, char c)
 {
-
 	
 }

@@ -6,7 +6,7 @@
 /*   By: bsurilla <bsurilla@student.42vienna.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/08 19:25:20 by bsurilla          #+#    #+#             */
-/*   Updated: 2026/05/15 16:12:48 by bsurilla         ###   ########.fr       */
+/*   Updated: 2026/05/18 20:49:33 by bsurilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,12 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	unsigned char	*ptr;
 	size_t			total;
 
-	total = nmemb * size;
 	i = 0;
 	if (nmemb == 0 || size == 0)
 		return (malloc(1));
 	if (size != 0 && SIZE_MAX / size < nmemb)
 		return (NULL);
+	total = nmemb * size;
 	ptr = malloc(total);
 	if (!ptr)
 		return (NULL);

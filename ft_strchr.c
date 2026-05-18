@@ -6,7 +6,7 @@
 /*   By: bsurilla <bsurilla@student.42vienna.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/02 18:15:57 by bsurilla          #+#    #+#             */
-/*   Updated: 2026/05/06 20:21:45 by bsurilla         ###   ########.fr       */
+/*   Updated: 2026/05/18 20:44:17 by bsurilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int main (void)
 	c = 'h' ;
 	printf("this is what you are looking for: %c\n",c);
 	printf("your str: %s\n",str);
-	printf("ft_strchr: %s\n",ft_strchr(str,c));
-	printf("strchr: %s\n",strchr(str,c));
+	printf("ft_strchr: %s\n",ft_strchr("tibouriee" ,0 ));
+	printf("strchr: %s\n",strchr("tibouriee", 0 ));
 }
 */

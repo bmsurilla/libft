@@ -6,7 +6,7 @@
 /*   By: bsurilla <bsurilla@student.42vienna.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/15 20:24:49 by bsurilla          #+#    #+#             */
-/*   Updated: 2026/05/15 20:34:00 by bsurilla         ###   ########.fr       */
+/*   Updated: 2026/05/18 18:56:45 by bsurilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	long	nb;
-	char	digit;
+	long long	nb;
+	char		digit;
 
 	nb = n;
 	if (nb < 0)
