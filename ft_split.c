@@ -33,25 +33,37 @@ static int  ft_wordcount(char *str, char c)
 static size_t   ft_wordlen(char *str, char c)
 {
     int i;
-
-    while (word[i] != 0)
+        
+    i = 0;
+    while (str[i] != 0 && str[i] != c)
     {
-
-
+        i++;
     }
+    return (i);
 }
 
 
 char	**ft_split(char const *s, char c)
 {
     int     i;
-    int     word;
+    int     wordcount;
     char    **splitwords;
-    int     wordlen;
+    char    *words;
+    size_t  wordlen;
 
-    word = ft_wordcount(s,c);
-    splitwords = malloc (word + 1);
+    wordcount = ft_wordcount(s,c);
+    splitwords = malloc ((wordcount + 1) * sizeof(*splitwords));
     if (!splitwords)
         return (NULL);
-
+    i = 0; 
+    while (s[i] != 0)
+    {
+        if (s[i] == c)
+            i++;
+        else
+        {
+            wordlen = ft_wordlen(&s[i], c) + 1;
+            ft_substr(s, i, wordlen);
+        }
+    }
 }
