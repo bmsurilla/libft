@@ -84,7 +84,7 @@ char	**ft_split(char const *s, char c)
     ft_arrayfill((char *)s, c, splitwords);
     return (splitwords);
 }
-
+/*
 #include <stdio.h>
 int main(void)
 {
@@ -103,3 +103,4 @@ int main(void)
         i++;
     }
 }
+*/
