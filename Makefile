@@ -1,4 +1,4 @@
-n# **************************************************************************** #
+# **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
@@ -6,7 +6,7 @@ n# **************************************************************************** 
 #    By: bsurilla <bsurilla@student.42vienna.c      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/04/30 20:33:41 by bsurilla          #+#    #+#              #
-#    Updated: 2026/05/16 18:29:50 by bsurilla         ###   ########.fr        #
+#    Updated: 2026/05/27 18:53:10 by bsurilla         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,8 +42,11 @@ SRC = ft_atoi.c \
 	  ft_putnbr_fd.c \
 	  ft_strtrim.c \
 	  ft_split.c \
+	  ft_striteri.c \
+	  ft_itoa.c \
+	  ft_strmapi.c\
 
-OBJ = $(SRC: .c=.o)
+OBJ = $(SRC:.c=.o)
 
 all: $(NAME)
 
@@ -54,10 +57,11 @@ $(NAME): $(OBJ)
 	cc -Wall -Wextra -Werror -c $< -o $@
 
 clean:
-	rm -f $(OBLJ)
+	rm -f $(OBJ)
 
-fclean:
+fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
 
+.PHONY: all clean fclean re

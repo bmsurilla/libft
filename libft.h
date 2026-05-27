@@ -6,7 +6,7 @@
 /*   By: bsurilla <bsurilla@student.42vienna.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/29 16:02:20 by bsurilla          #+#    #+#             */
-/*   Updated: 2026/05/16 18:29:32 by bsurilla         ###   ########.fr       */
+/*   Updated: 2026/05/27 18:52:17 by bsurilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,4 +46,9 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
+void	ft_striteri(char *s, void (*f) (unsigned int, char*));
+char	*ft_itoa(int n);
+int		ft_atoi(const char *nptr);
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+
 #endif

@@ -1,44 +1,53 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bsurilla <bsurilla@student.42vienna.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/26 21:58:47 by bsurilla          #+#    #+#             */
-/*   Updated: 2026/05/26 22:28:44 by bsurilla         ###   ########.fr       */
+/*   Created: 2026/05/27 17:46:19 by bsurilla          #+#    #+#             */
+/*   Updated: 2026/05/27 18:48:53 by bsurilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f) (unsigned int, char*))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
+	int				len;
+	char			*mapi;
 	unsigned int	i;
 
+	len = ft_strlen(s);
+	mapi = malloc (len + 1);
+	if (!mapi)
+		return (NULL);
 //	if (s == 0 || f == 0)
-//		return ;
+//		return ;	
 	i = 0;
 	while (s[i] != 0)
 	{
-		f(i, &s[i]);
+		mapi[i] = f(i, s[i]);
 		i++;
 	}
+	mapi[i] = '\0';
+	return (mapi);
 }
 /*
 #include <stdio.h>
-void	ft_upper(unsigned int i, char *c)
+char	ft_lower (unsigned int i, char c)
 {
-	(void)i;
-	*c = ft_toupper(*c);
+	(void) i;
+	c = ft_tolower(c);
+	return (c);
 }
 
-int main(void)
+int main (void)
 {
-    char str[] = "stop";
+char str[] = "DUDE CALM DOWN";
+char *str2;
 
-    ft_striteri(str, ft_upper);
-
-    printf("%s\n", str);
+str2 = ft_strmapi(str, ft_lower);
+printf("%s\n", str2);
 }
 */
