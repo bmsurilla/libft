@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bsurilla <bsurilla@student.42vienna.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/28 16:50:39 by bsurilla          #+#    #+#             */
-/*   Updated: 2026/05/28 19:54:35 by bsurilla         ###   ########.fr       */
+/*   Created: 2026/05/28 19:16:02 by bsurilla          #+#    #+#             */
+/*   Updated: 2026/05/28 20:11:00 by bsurilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
-
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	new->next = *lst;
-	lst = &new;
+	t_list	*last;
+
+	if (*lst == NULL)
+		*lst = new;
+	else
+	{	
+		last = ft_lstlast(*lst);
+		last->next = new;
+	}
 }
 /*
 #include <stdio.h>
@@ -37,20 +43,21 @@ int	main (void)
 	t_list	*node1 = NULL;
 	t_list	*node2 = NULL;
 	t_list	*node3 = NULL;
-	char content1[] = "b";
-	char content2[] = "c";
-	char content3[] = "d";
-	
+	t_list	*node4 = NULL;
+	char	content1[] = "b";
+	char	content2[] = "c";
+	char	content3[] = "d";
+	char	content4[] = "o";
 	node1 = ft_lstnew(content1);
 	node2 = ft_lstnew(content2);
 	node3 = ft_lstnew(content3);
-	
+	node4 = ft_lstnew(content4);
+
 	start = &node1;
 	node1->next = node2;
-	ft_printtester(*start);	
-
-	ft_lstadd_front(start, node3);
-	start = &node3;
-	ft_printtester(*start);	
+	node2->next = node3;
+		
+	ft_lstadd_back(start, node4);
+	ft_printtester(*start);
 }
 */

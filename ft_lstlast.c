@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bsurilla <bsurilla@student.42vienna.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/28 16:50:39 by bsurilla          #+#    #+#             */
-/*   Updated: 2026/05/28 19:54:35 by bsurilla         ###   ########.fr       */
+/*   Created: 2026/05/28 19:01:46 by bsurilla          #+#    #+#             */
+/*   Updated: 2026/05/28 19:52:56 by bsurilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
-
+t_list	*ft_lstlast(t_list *lst)
 {
-	new->next = *lst;
-	lst = &new;
+	while (lst->next != NULL)
+	{
+		lst = lst->next;	 
+	}
+	return (lst);
 }
 /*
 #include <stdio.h>
@@ -51,6 +53,8 @@ int	main (void)
 
 	ft_lstadd_front(start, node3);
 	start = &node3;
-	ft_printtester(*start);	
+	ft_printtester(*start);
+	printf("size of the list: %d\n", ft_lstsize(*start));
+	ft_printtester(ft_lstlast(*start));
 }
 */
