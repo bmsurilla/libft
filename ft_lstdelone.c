@@ -6,7 +6,7 @@
 /*   By: bsurilla <bsurilla@student.42vienna.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/28 20:12:30 by bsurilla          #+#    #+#             */
-/*   Updated: 2026/05/28 21:00:02 by bsurilla         ###   ########.fr       */
+/*   Updated: 2026/05/28 21:07:59 by bsurilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,10 @@
 
 void	ft_lstdelone(t_list *lst, void(*del)(void*))
 {
-	if (lst == 0 || del == 0)
-		return ; 
 	del(lst->content);
 	free(lst);
 }
-/*
+
 #include <stdio.h>
 
 void	ft_printtester(t_list *start)
@@ -61,4 +59,4 @@ int	main (void)
 	node3->next = NULL;
 	ft_printtester(*start);
 }
-*/
+
