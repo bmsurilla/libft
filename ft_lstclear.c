@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bsurilla <bsurilla@student.42vienna.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/28 20:12:30 by bsurilla          #+#    #+#             */
-/*   Updated: 2026/05/28 21:07:59 by bsurilla         ###   ########.fr       */
+/*   Created: 2026/05/28 21:02:46 by bsurilla          #+#    #+#             */
+/*   Updated: 2026/05/28 21:32:56 by bsurilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdelone(t_list *lst, void(*del)(void*))
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	del(lst->content);
-	free(lst);
+	while (*lst != NULL)
+	{
+		del((*lst)->content);
+		*lst = (*lst)->next;
+	}
+	free(*lst);
 }
 /*
 #include <stdio.h>
@@ -37,10 +41,16 @@ int	main (void)
 	t_list	*node2 = NULL;
 	t_list	*node3 = NULL;
 	t_list	*node4 = NULL;
-	char	*content1 = "b";
-	char	*content2 = "c";
-	char	*content3 = "d";
-	char	*content4 = malloc(2); // content was not malloced so it the memory was corrupted when freed
+	char	*content1 = malloc(2);
+	char	*content2 = malloc(2);
+	char	*content3 = malloc(2);
+	char	*content4 = malloc(2); // content was not mallocced so it the memory was corrupted when freed
+	content1[0] = 'a';
+	content1[1] = '\0';
+	content2[0] = 'b';
+	content2[1] = '\0';
+	content3[0] = 'c';
+	content3[1] = '\0';
 	content4[0] = 'o';
 	content4[1] = '\0';
 	node1 = ft_lstnew(content1);
@@ -55,8 +65,7 @@ int	main (void)
 	ft_lstadd_back(start, node4);
 	ft_printtester(*start);
 	
-	ft_lstdelone(node4,free);
-	node3->next = NULL;
+	ft_lstclear(start, free);
 	ft_printtester(*start);
 }
 */
