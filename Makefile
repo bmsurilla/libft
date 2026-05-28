@@ -6,7 +6,7 @@
 #    By: bsurilla <bsurilla@student.42vienna.c      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/04/30 20:33:41 by bsurilla          #+#    #+#              #
-#    Updated: 2026/05/28 21:13:09 by bsurilla         ###   ########.fr        #
+#    Updated: 2026/05/28 22:35:10 by bsurilla         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,7 +53,7 @@ SRC = ft_atoi.c \
 	  ft_lstadd_back.c \
 	  ft_lstdelone.c \
 	  ft_lstclear.c \
-	 # ft_lstiter.c \
+	  ft_lstiter.c \
 	  ft_lstmap.c \
 
 OBJ = $(SRC:.c=.o)
