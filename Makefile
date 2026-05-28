@@ -6,7 +6,7 @@
 #    By: bsurilla <bsurilla@student.42vienna.c      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/04/30 20:33:41 by bsurilla          #+#    #+#              #
-#    Updated: 2026/05/27 20:24:20 by bsurilla         ###   ########.fr        #
+#    Updated: 2026/05/28 18:04:21 by bsurilla         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,6 +46,8 @@ SRC = ft_atoi.c \
 	  ft_itoa.c \
 	  ft_strmapi.c \
 	  ft_putendl_fd.c \
+	  ft_lstnew.c \
+	  ft_lstadd_front.c \
 
 OBJ = $(SRC:.c=.o)
 
