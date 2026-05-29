@@ -33,7 +33,7 @@ t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void*))
 	}
 	return (lstcpy);
 }
-
+/*
 #include <stdio.h>
 
 void	ft_printtester(t_list *start)
@@ -45,13 +45,25 @@ void	ft_printtester(t_list *start)
 	}
 	printf("\n");
 }
-static void	ft_upper(void *c)
+
+static void *ft_uppercpy(void *content)
 {
-	char *str;
-	
-	str = (char *)c;
-	*str = ft_toupper(*str);
+	char	*str;
+	char	*copy;
+
+	str = (char *)content;
+	copy = ft_strdup(str);
+	if (!copy)
+		return (NULL);
+	copy[0] = ft_toupper(copy[0]);
+	return (copy);
 }
+
+static void	ft_del(void *content)
+{
+	free(content);
+}
+
 int	main (void)
 {
 	t_list	**start = NULL;
@@ -75,7 +87,14 @@ int	main (void)
 	ft_lstadd_back(start, node4);
 	ft_printtester(*start);
 	
-	ft_lstiter(*start,ft_upper);
-	ft_printtester(*start);	
-}
+	t_list *mapped;
 
+	mapped = ft_lstmap(*start, ft_uppercpy, ft_del);
+
+	printf("ORIGINAL LIST:\n");
+	ft_printtester(*start);
+
+	printf("MAPPED LIST:\n");
+	ft_printtester(mapped);
+}
+*/
