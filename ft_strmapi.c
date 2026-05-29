@@ -6,7 +6,7 @@
 /*   By: bsurilla <bsurilla@student.42vienna.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/27 17:46:19 by bsurilla          #+#    #+#             */
-/*   Updated: 2026/05/27 18:48:53 by bsurilla         ###   ########.fr       */
+/*   Updated: 2026/05/29 20:07:41 by bsurilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	mapi = malloc (len + 1);
 	if (!mapi)
 		return (NULL);
-//	if (s == 0 || f == 0)
-//		return ;	
 	i = 0;
 	while (s[i] != 0)
 	{

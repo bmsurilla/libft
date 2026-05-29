@@ -6,7 +6,7 @@
 /*   By: bsurilla <bsurilla@student.42vienna.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/27 14:36:43 by bsurilla          #+#    #+#             */
-/*   Updated: 2026/05/27 17:04:01 by bsurilla         ###   ########.fr       */
+/*   Updated: 2026/05/29 20:09:47 by bsurilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,4 +65,3 @@ char	*ft_itoa(int n)
 // 	printf("%s\n",ft_itoa(INT_MIN));
 // 	// printf("%s\n",ft_itoa(0));
 // }
-

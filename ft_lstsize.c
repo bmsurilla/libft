@@ -6,7 +6,7 @@
 /*   By: bsurilla <bsurilla@student.42vienna.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/28 18:26:46 by bsurilla          #+#    #+#             */
-/*   Updated: 2026/05/28 18:58:15 by bsurilla         ###   ########.fr       */
+/*   Updated: 2026/05/29 20:11:06 by bsurilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,12 @@
 int	ft_lstsize(t_list *lst)
 {
 	int	i;
-	
+
 	i = 0;
 	while (lst)
 	{
 		i++;
-		lst = lst->next;	
+		lst = lst->next;
 	}
 	return (i);
 }

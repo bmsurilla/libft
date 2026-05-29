@@ -14,7 +14,7 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list *shadow;
+	t_list	*shadow;
 
 	while (*lst != NULL)
 	{
@@ -24,11 +24,11 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 		*lst = shadow;
 	}
 	*lst = NULL;
-}	
+}
 /*
 #include <stdio.h>
 
-void	ft_printtester(t_list *start)
+static	void	ft_printtester(t_list *start)
 {
 	while (start != NULL)
 	{
@@ -37,7 +37,6 @@ void	ft_printtester(t_list *start)
 	}
 	printf("\n");
 }
-
 int	main (void)
 {
 	t_list	**start = NULL;
@@ -48,7 +47,7 @@ int	main (void)
 	char	*content1 = malloc(2);
 	char	*content2 = malloc(2);
 	char	*content3 = malloc(2);
-	char	*content4 = malloc(2); // content was not mallocced so it the memory was corrupted when freed
+	char	*content4 = malloc(2); 
 	content1[0] = 'a';
 	content1[1] = '\0';
 	content2[0] = 'b';

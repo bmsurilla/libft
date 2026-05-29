@@ -6,19 +6,17 @@
 /*   By: bsurilla <bsurilla@student.42vienna.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/28 22:37:33 by bsurilla          #+#    #+#             */
-/*   Updated: 2026/05/28 23:03:11 by bsurilla         ###   ########.fr       */
+/*   Updated: 2026/05/29 20:11:44 by bsurilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void*))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void*))
 {
 	t_list	*lstcpy;
 	t_list	*nodecpy;
 
-//	if (!lst || !f || !del)
-//		return (NULL);
 	lstcpy = NULL;
 	while (lst != 0)
 	{
@@ -28,7 +26,7 @@ t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void*))
 			ft_lstclear(&lstcpy, del);
 			return (NULL);
 		}
-		ft_lstadd_back(&lstcpy,nodecpy);
+		ft_lstadd_back(&lstcpy, nodecpy);
 		lst = lst->next;
 	}
 	return (lstcpy);

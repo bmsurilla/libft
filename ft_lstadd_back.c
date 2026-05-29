@@ -6,7 +6,7 @@
 /*   By: bsurilla <bsurilla@student.42vienna.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/28 19:16:02 by bsurilla          #+#    #+#             */
-/*   Updated: 2026/05/28 20:11:00 by bsurilla         ###   ########.fr       */
+/*   Updated: 2026/05/29 20:12:56 by bsurilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	if (*lst == NULL)
 		*lst = new;
 	else
-	{	
+	{
 		last = ft_lstlast(*lst);
 		last->next = new;
 	}

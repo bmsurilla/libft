@@ -6,7 +6,7 @@
 /*   By: bsurilla <bsurilla@student.42vienna.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/28 15:19:52 by bsurilla          #+#    #+#             */
-/*   Updated: 2026/05/28 18:10:14 by bsurilla         ###   ########.fr       */
+/*   Updated: 2026/05/29 20:06:58 by bsurilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,14 @@
 t_list	*ft_lstnew(void *content)
 {
 	t_list	*new;
-	
+
 	new = malloc (sizeof(t_list));
 	if (!new)
 		return (NULL);
 	new->content = content;
 	new->next = NULL;
 	return (new);
-} 
+}
 /*
 #include <stdio.h>
 

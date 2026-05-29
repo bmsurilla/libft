@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void	ft_lstdelone(t_list *lst, void(*del)(void*))
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
 	del(lst->content);
 	free(lst);
@@ -40,7 +40,7 @@ int	main (void)
 	char	*content1 = "b";
 	char	*content2 = "c";
 	char	*content3 = "d";
-	char	*content4 = malloc(2); // content was not malloced so it the memory was corrupted when freed
+	char	*content4 = malloc(2); 
 	content4[0] = 'o';
 	content4[1] = '\0';
 	node1 = ft_lstnew(content1);

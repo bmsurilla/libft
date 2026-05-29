@@ -6,7 +6,7 @@
 /*   By: bsurilla <bsurilla@student.42vienna.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/28 21:34:55 by bsurilla          #+#    #+#             */
-/*   Updated: 2026/05/28 22:34:51 by bsurilla         ###   ########.fr       */
+/*   Updated: 2026/05/29 20:05:07 by bsurilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	while (lst != NULL) 
+	while (lst != NULL)
 	{
 		f(lst->content);
 		lst = lst->next;

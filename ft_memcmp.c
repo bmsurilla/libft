@@ -6,7 +6,7 @@
 /*   By: bsurilla <bsurilla@student.42vienna.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/30 21:13:18 by bsurilla          #+#    #+#             */
-/*   Updated: 2026/05/27 17:26:09 by bsurilla         ###   ########.fr       */
+/*   Updated: 2026/05/29 20:02:32 by bsurilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	i = 0;
 	if (n == 0)
 		return (0);
-	while (ptr1[i] == ptr2[i] &&  n > 1)
+	while (ptr1[i] == ptr2[i] && n > 1)
 	{
 		i++;
 		n--;

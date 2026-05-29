@@ -6,7 +6,7 @@
 /*   By: bsurilla <bsurilla@student.42vienna.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/02 18:44:05 by bsurilla          #+#    #+#             */
-/*   Updated: 2026/05/06 20:24:01 by bsurilla         ###   ########.fr       */
+/*   Updated: 2026/05/29 20:00:18 by bsurilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*ft_strrchr(const char *s, int c)
 	{
 		if (str[len] == chr)
 			return (&str[len]);
-		len--;	
+		len--;
 	}
 	return (0);
 }

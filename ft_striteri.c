@@ -6,7 +6,7 @@
 /*   By: bsurilla <bsurilla@student.42vienna.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/26 21:58:47 by bsurilla          #+#    #+#             */
-/*   Updated: 2026/05/26 22:28:44 by bsurilla         ###   ########.fr       */
+/*   Updated: 2026/05/29 20:12:12 by bsurilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ void	ft_striteri(char *s, void (*f) (unsigned int, char*))
 {
 	unsigned int	i;
 
-//	if (s == 0 || f == 0)
-//		return ;
 	i = 0;
 	while (s[i] != 0)
 	{
