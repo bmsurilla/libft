@@ -40,3 +40,13 @@ int	ft_atoi(const char *nptr)
 	}
 	return (digit * sign);
 }
+
+// #include <stdio.h>
+// int	main(int argc, char *argv[])
+// {
+// 	if (argc != 2)
+// 		return (0);	
+
+// 	printf("%d", ft_atoi(argv[1]));
+// 	return(0);
+// }

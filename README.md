@@ -72,7 +72,7 @@ The library contains reimplementations of standard libc functions as well as add
 * ft_putendl_fd
 * ft_putnbr_fd
 
-## Linked list bonus functions
+## Linked list functions
 
 * ft_lstnew
 * ft_lstadd_front
@@ -162,6 +162,7 @@ AI tools were used during the development of this project after consulting my pe
 * clarifying concepts related to pointers, linked lists, and function pointers
 * reviewing edge cases
 * guidance during testing
+* assistance in formulating the README
 
 All implementation, debugging decisions, testing, and final code integration were completed manually.
 

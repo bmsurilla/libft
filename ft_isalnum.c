@@ -19,3 +19,12 @@ int	ft_isalnum(int c)
 		return (0);
 	return (1);
 }
+#include <stdio.h>
+int	main (void)
+{
+	int	c;
+	c = 42;
+
+	printf("this is the int: %c,\n 1 for YES and 0 for NO: %d\n", (char)c, ft_isalnum(c));
+	
+}
