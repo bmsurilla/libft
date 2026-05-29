@@ -14,23 +14,28 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	long long	nb;
+	long	nb;
 	char		digit;
 
 	nb = n;
+	if (n == -2147483648)
+	{
+		write(fd, "-2147483648", 11);
+		return ;
+	}
 	if (nb < 0)
 	{
-		write(1, "-", 1);
+		write(fd, "-", 1);
 		nb = nb *(-1);
 	}
 	if (nb >= 10)
-		ft_putnbr_fd(nb / 10, 1);
-	digit = n % 10 + '0';
+		ft_putnbr_fd(nb / 10, fd);
+	digit = nb % 10 + '0';
 	write(fd, &digit, 1);
 }
-/*
-int	main(void)
-{
-	ft_putnbr_fd(1134,1);
-}
-*/
+
+// int	main(void)
+// {
+// 	printf("mod: %d\n", -42 % 10);
+	// ft_putnbr_fd(-42,1);
+// }

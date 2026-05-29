@@ -33,36 +33,36 @@ char	*ft_itoa(int n)
 {
 	long long	nb;
 	size_t		len;
-	char		*intstr;
+	char		*str;
 
 	nb = n;
 	len = ft_intlen(nb);
-	intstr = malloc(len + 1);
-	if (!intstr)
+	str = malloc(len + 1);
+	if (!str)
 		return (NULL);
-	intstr[len] = '\0';
+	str[len] = '\0';
 	if (nb < 0)
 	{
-		intstr[0] = '-';
-		nb = nb * (-1);
+		str[0] = '-';
+		nb *= -1;
 	}
 	if (nb == 0)
-		intstr[len - 1] = '0';
-	while (len-- > 0)
+		str[0] = '0';
+	while (len > (n < 0))
 	{
-		if (intstr[len] == '-')
-			return (intstr);
-		intstr[len] = nb % 10 + '0';
-		nb = nb / 10;
+		str[--len] = (nb % 10) + '0';
+		nb /= 10;
 	}
-	return (intstr);
+	return (str);
 }
-/*
-#include <stdio.h>
-int main ()
-{
-	printf("%s\n",ft_itoa(-7256));
-	printf("%s\n",ft_itoa(7256));
-	printf("%s\n",ft_itoa(0));
-}
-*/
+
+// #include <stdio.h>
+// int main ()
+// {
+// 	#include <limits.h>
+// 	printf("%s\n",ft_itoa(-155));
+// 	printf("----------------\n");
+// 	printf("%s\n",ft_itoa(INT_MIN));
+// 	// printf("%s\n",ft_itoa(0));
+// }
+

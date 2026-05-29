@@ -6,7 +6,7 @@
 /*   By: bsurilla <bsurilla@student.42vienna.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/09 19:10:48 by bsurilla          #+#    #+#             */
-/*   Updated: 2026/05/09 22:01:51 by bsurilla         ###   ########.fr       */
+/*   Updated: 2026/05/29 15:10:51 by bsurilla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,15 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*sub;
 
 	slen = ft_strlen(s);
-	sub = malloc (slen + 1);
+	i = 0;
+	if (start >= slen)
+		return (ft_strdup(""));
+	if (len > slen - start)
+		len = slen - start;
+	sub = malloc((len + 1) * sizeof(char));
 	if (!sub)
 		return (NULL);
-	i = 0;
-	while (i < len)
+	while (i < len && s[start + i] != 0)
 	{
 		sub[i] = s[start + i];
 		i++;

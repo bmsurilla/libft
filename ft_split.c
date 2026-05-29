@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static int	ft_wordcount(char *str, char c)
 {
@@ -40,7 +41,7 @@ static void	ft_freemem(char **words, int w)
 	free(words);
 }
 
-static void	ft_arrayfill(char *str, char c, char **words)
+static int	ft_arrayfill(char *str, char c, char **words)
 {
 	int		i;
 	int		w;
@@ -53,7 +54,7 @@ static void	ft_arrayfill(char *str, char c, char **words)
 		while (str[i] == c)
 			i++;
 		if (str[i] == '\0')
-			return ;
+			return (w);
 		wordlen = 0;
 		while (str[i + wordlen] != 0 && str [i + wordlen] != c)
 			wordlen++;
@@ -61,16 +62,17 @@ static void	ft_arrayfill(char *str, char c, char **words)
 		if (!words[w])
 		{
 			ft_freemem(words, w);
-			return ;
+			return (w);
 		}
 		w++;
 		i = i + wordlen;
 	}
-	words[w] = NULL;
+	return (w);
 }
 
 char	**ft_split(char const *s, char c)
 {
+	int		w;
 	int		wordcount;
 	char	**splitwords;
 
@@ -80,9 +82,17 @@ char	**ft_split(char const *s, char c)
 	splitwords = malloc ((wordcount + 1) * sizeof(*splitwords));
 	if (!splitwords)
 		return (NULL);
-	ft_arrayfill((char *)s, c, splitwords);
+	w = ft_arrayfill((char *)s, c, splitwords);
+	splitwords[w] = NULL;
 	return (splitwords);
 }
+
+// int main(void) {
+// 	char *s = "  tripouille  42  ";
+// 	// printf("wc: %i\n", ft_wordcount(s, ' '));
+// 	ft_split(s, ' ');
+// }
+
 /*
 #include <stdio.h>
 int main(void)

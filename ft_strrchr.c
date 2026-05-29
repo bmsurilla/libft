@@ -12,37 +12,22 @@
 
 #include "libft.h"
 
-static	int	length(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != 0)
-	{
-		i++;
-	}
-	return (i);
-}
-
 char	*ft_strrchr(const char *s, int c)
 {
-	int				i;
 	char			*str;
 	int				len;
 	unsigned char	chr;
 
 	str = (char *)s;
 	chr = (unsigned char) c;
-	len = length(str);
-	i = len - 1;
+	len = ft_strlen(str);
 	if (chr == 0)
 		return (&str[len]);
-	while (str[i] != 0)
+	while (len >= 0)
 	{
-		if (str[i] != chr)
-			i--;
-		else
-			return (&str[i]);
+		if (str[len] == chr)
+			return (&str[len]);
+		len--;	
 	}
 	return (0);
 }
