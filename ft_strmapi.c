@@ -29,7 +29,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	copy[i] = '\0';
 	return (copy);
 }
-/*
+/* 
 #include <stdio.h>
 char	ft_lower (unsigned int i, char c)
 {
@@ -46,4 +46,4 @@ char *str2;
 str2 = ft_strmapi(str, ft_lower);
 printf("%s\n", str2);
 }
-*/
+ */

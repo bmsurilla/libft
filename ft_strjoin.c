@@ -36,7 +36,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	join[i + a] = '\0';
 	return (join);
 }
-/*
+/* 
 #include <stdio.h>
 int	main(void)
 {
@@ -44,4 +44,4 @@ int	main(void)
 	char s2[] = " Bobert";
 	printf("%s\n",ft_strjoin(s1,s2));
 }
-*/
+ */

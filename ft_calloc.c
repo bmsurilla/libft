@@ -53,5 +53,4 @@ int	main(void)
 	}
 	free(array);
 	return (0);
-}
- */
+} */

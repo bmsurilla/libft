@@ -43,7 +43,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	trimmed = ft_substr(s1, i, b - i + 1);
 	return (trimmed);
 }
-/*
+/* 
 #include <stdio.h>
 int	main(void)
 {
@@ -52,4 +52,4 @@ int	main(void)
 	
 	printf("trimmed str: %s\n",ft_strtrim(str,set));
 }
-*/
+ */

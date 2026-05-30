@@ -33,8 +33,8 @@ char	*ft_strdup(const char *s)
 	dest[i] = '\0';
 	return (dest);
 }
-/*
-#include <stdio.h>
+
+/* #include <stdio.h>
 #include <string.h>
 
 int main(void)
@@ -47,4 +47,4 @@ int main(void)
 	printf("ft_strdup address %p\n text %s\n",dupe,dupe);
 	printf("strdup address %p\n text %s\n", dupe2,dupe2);
 }
-*/
+ */

@@ -35,7 +35,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	sub[len] = '\0';
 	return (sub);
 }
-/*
+/*  
 #include <stdio.h>
 int	main(void)
 {
@@ -48,5 +48,4 @@ int	main(void)
 
 	printf("orig str: %s\n",str);
 	printf("substr: %s\n",ft_substr(str,start,len));
-}
-*/
+} */

@@ -84,29 +84,9 @@ char	**ft_split(char const *s, char c)
 	return (splitwords);
 }
 
-// int main(void) {
-// 	char *s = "  tripouille  42  ";
-// 	// printf("wc: %i\n", ft_wordcount(s, ' '));
-// 	ft_split(s, ' ');
-// }
-
-/*
-#include <stdio.h>
-int main(void)
-{
-    char str[] = ",,Rome,,Manila,Cleveland,any where really...";
-    char c = ',';
-    char **result;
-    int i = 0;
-
-    result = ft_split(str, c);
-    if (!result)
-        return (1);
-
-    while (result[i])
-    {
-        printf("I'd rather be in: %s\n", result[i]);
-        i++;
-    }
-}
-*/
+/* #include <stdio.h>
+int main(void) {
+	char *s = "  tripouille  42  ";
+	printf("wc: %i\n", ft_wordcount(s, ' '));
+	ft_split(s, ' ');
+} */
