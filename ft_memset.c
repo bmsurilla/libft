@@ -26,3 +26,13 @@ void	*ft_memset(void *s, int c, size_t n)
 	}
 	return (s);
 }
+
+/* #include <stdio.h>
+
+int	main (void)
+{
+	char str[] = "Hello Bea";
+	
+	printf("str: %s,\n", str);
+	printf("after memset: %s\n", (char *)ft_memset(str, '2', 3));
+} */

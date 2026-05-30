@@ -14,22 +14,20 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int				len;
-	char			*mapi;
+	char			*copy;
 	unsigned int	i;
 
-	len = ft_strlen(s);
-	mapi = malloc (len + 1);
-	if (!mapi)
+	copy = malloc(ft_strlen(s) + 1);
+	if (!copy)
 		return (NULL);
 	i = 0;
 	while (s[i] != 0)
 	{
-		mapi[i] = f(i, s[i]);
+		copy[i] = f(i, s[i]);
 		i++;
 	}
-	mapi[i] = '\0';
-	return (mapi);
+	copy[i] = '\0';
+	return (copy);
 }
 /*
 #include <stdio.h>

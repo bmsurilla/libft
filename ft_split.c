@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int	ft_wordcount(char *str, char c)
 {
@@ -56,7 +55,7 @@ static int	ft_arrayfill(char *str, char c, char **words)
 		if (str[i] == '\0')
 			return (w);
 		wordlen = 0;
-		while (str[i + wordlen] != 0 && str [i + wordlen] != c)
+		while (str[i + wordlen] != '\0' && str [i + wordlen] != c)
 			wordlen++;
 		words[w] = ft_substr(str, i, wordlen);
 		if (!words[w])
@@ -76,10 +75,8 @@ char	**ft_split(char const *s, char c)
 	int		wordcount;
 	char	**splitwords;
 
-	if (s == 0)
-		return (NULL);
 	wordcount = ft_wordcount((char *)s, c);
-	splitwords = malloc ((wordcount + 1) * sizeof(*splitwords));
+	splitwords = malloc((wordcount + 1) * sizeof(char *));
 	if (!splitwords)
 		return (NULL);
 	w = ft_arrayfill((char *)s, c, splitwords);

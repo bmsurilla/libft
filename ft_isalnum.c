@@ -14,17 +14,15 @@
 
 int	ft_isalnum(int c)
 {
-	if (!((c <= '9' && c >= '0') || (c <= 'Z' && c >= 'A')
-			|| (c <= 'z' && c >= 'a')))
-		return (0);
-	return (1);
+	if ((c <= '9' && c >= '0') || (c <= 'Z' && c >= 'A')
+		|| (c <= 'z' && c >= 'a'))
+		return (1);
+	return (0);
 }
-#include <stdio.h>
+/* #include <stdio.h>
 int	main (void)
 {
-	int	c;
-	c = 42;
+	int	c = 42;
 
-	printf("this is the int: %c,\n 1 for YES and 0 for NO: %d\n", (char)c, ft_isalnum(c));
-	
-}
+	printf("Number: %d, 1 = TRUE, 0 = FALSE: %d\n", c, ft_isprint(c));
+} */

@@ -14,7 +14,14 @@
 
 int	ft_isdigit(int c)
 {
-	if (!(c <= '9' && c >= '0'))
-		return (0);
-	return (1);
+	if (c <= '9' && c >= '0')
+		return (1);
+	return (0);
 }
+/* #include <stdio.h>
+int	main (void)
+{
+	int	c = 4;
+
+	printf("Number: %d, 1 = TRUE, 0 = FALSE: %d\n", c, ft_isprint(c));
+} */

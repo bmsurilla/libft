@@ -20,9 +20,7 @@ static int	ft_setcheck(char const *set, char c)
 	while (set[f] != 0)
 	{
 		if (c == set[f])
-		{
 			return (1);
-		}
 		f++;
 	}
 	return (0);
@@ -34,24 +32,15 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		b;
 	char	*trimmed;
 	int		len;
-	int		tlen;
 
 	len = ft_strlen(s1);
 	i = 0;
 	while (s1[i] != 0 && ft_setcheck(set, s1[i]) == 1)
-	{
 		i++;
-	}
 	b = len - 1;
-	while (b >= 0 && ft_setcheck(set, s1[b]) == 1)
-	{
+	while (b >= i && ft_setcheck(set, s1[b]) == 1)
 		b--;
-	}
-	if (b < i)
-		tlen = 0;
-	else
-		tlen = b - i + 1;
-	trimmed = ft_substr (s1, i, tlen);
+	trimmed = ft_substr(s1, i, b - i + 1);
 	return (trimmed);
 }
 /*

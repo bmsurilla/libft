@@ -18,11 +18,10 @@ int	ft_isascii(int c)
 		return (1);
 	return (0);
 }
-#include <stdio.h>
+/* #include <stdio.h>
 int	main (void)
 {
-	long	c;
-	c = ;
+	int	c = 127;
 
-	printf("this is the int: %c,\n 1 for YES and 0 for NO: %d\n", (char)c, ft_isascii(c));
-}
+	printf("Number: %d, 1 = TRUE, 0 = FALSE: %d\n", c, ft_isprint(c));
+} */

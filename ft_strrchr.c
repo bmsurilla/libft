@@ -29,7 +29,7 @@ char	*ft_strrchr(const char *s, int c)
 			return (&str[len]);
 		len--;
 	}
-	return (0);
+	return (NULL);
 }
 /*
 #include <stdio.h>

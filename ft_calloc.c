@@ -28,29 +28,30 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	ft_bzero(ptr, total);
 	return (ptr);
 }
-// #include <stdio.h>
-// int	main(void)
-// {
-// 	size_t	need;
-// 	size_t	size;
-// 	int		*array;
-// 	int		i;
+/* #include <stdio.h>
+int	main(void)
+{
+	size_t	need;
+	size_t	size;
+	int		*array;
+	int		i;
 
-// 	need = 20;
-// 	size = sizeof(int);
-// 	array = ft_calloc(need,size);
+	need = 5;
+	size = sizeof(int);
+	array = ft_calloc(need,size);
 
-// 	if (!array)
-// 	{
-// 		printf("calloc failed\n");
-// 		return(1);
-// 	}
-// 	i = 0;
-// 	while (i < (int)need)
-// 	{
-// 		printf("%d", array[i]);
-// 		i++;
-// 	}
-// 	free(array);
-// 	return (0);
-// }
+	if (!array)
+	{
+		printf("calloc failed\n");
+		return(1);
+	}
+	i = 0;
+	while (i < (int)need)
+	{
+		printf("%d", array[i]);
+		i++;
+	}
+	free(array);
+	return (0);
+}
+ */

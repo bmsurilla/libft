@@ -26,23 +26,22 @@ void	ft_bzero(void *s, size_t n)
 	}
 }
 
-// #include <stdio.h>
-// #include <string.h>
-// int	main(void)
-// {
-// 	char	str[] = "boom-chicka-boom";
-// 	char	str2[] = "boom-chicka-boom";
-// 	int		n;
+/* #include <stdio.h>
+#include <string.h>
+int	main(void)
+{
+	char	str[] = "boom-chicka-boom";
+	char	str2[] = "boom-chicka-boom";
+	int		n;
 
-// 	n = 1;
-// 	printf("your string: %s\n", str);
-// 	ft_bzero(str,n);
-// 	bzero(str2,n);
+	n = 1;
+	printf("your string: %s\n", str);
+	ft_bzero(str,n);
+	bzero(str2,n);
 
-// 	printf("your string: %s\n", str); // do you understand why it's empty?
-//     printf("your string: %s\n", str2); 
+	printf("your string: %s\n", str); // do you understand why it's empty?
+    printf("your string: %s\n", str2); 
 
-// 	// printf("your string: %s\n", &str[5]);
-//     // printf("your string: %s\n", &str2[5]);
-// }
-
+	// printf("your string: %s\n", &str[5]);
+    // printf("your string: %s\n", &str2[5]);
+} */

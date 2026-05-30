@@ -14,20 +14,20 @@
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t			i;
-	unsigned char	*pstr;
-	unsigned char	find;
+	size_t				i;
+	unsigned char		find;
+	const unsigned char	*pstr;
 
-	pstr = (unsigned char *)s;
 	find = (unsigned char) c;
+	pstr = (const unsigned char *)s;
 	i = 0;
 	while (i < n)
 	{
 		if (pstr[i] == find)
-			return ((void *) & pstr[i]);
+			return ((void *)&pstr[i]);
 		i++;
 	}
-	return (0);
+	return (NULL);
 }
 /*
 #include <stdio.h>

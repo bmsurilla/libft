@@ -34,7 +34,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void*))
 	}
 	return (lstcpy);
 }
-/*
+/* 
 #include <stdio.h>
 
 void	ft_printtester(t_list *start)
@@ -77,9 +77,17 @@ int	main (void)
 	char	content3[] = "d";
 	char	content4[] = "o";
 	node1 = ft_lstnew(content1);
+	if (!node1)
+		return (1);
 	node2 = ft_lstnew(content2);
+	if (!node2)
+		return (1);
 	node3 = ft_lstnew(content3);
+	if (!node3)
+		return (1);
 	node4 = ft_lstnew(content4);
+	if (!node4)
+		return (1);
 
 	start = &node1;
 	node1->next = node2;
@@ -97,5 +105,5 @@ int	main (void)
 
 	printf("MAPPED LIST:\n");
 	ft_printtester(mapped);
-}
-*/
+	
+} */

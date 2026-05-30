@@ -18,3 +18,10 @@ int	ft_isprint(int c)
 		return (1);
 	return (0);
 }
+/* #include <stdio.h>
+int	main (void)
+{
+	int	c = 42;
+
+	printf("Number: %d, 1 = TRUE, 0 = FALSE: %d\n", c, ft_isprint(c));
+} */

@@ -16,37 +16,33 @@ int	ft_atoi(const char *nptr)
 {
 	int			i;
 	int			sign;
-	long long	digit;
+	long long	number;
 
 	i = 0;
-	while (nptr[i] != 0 && (nptr[i] == 32 || (nptr[i] <= 13 && nptr[i] >= 9)))
-	{
+	while (nptr[i] == 32 || (nptr[i] <= 13 && nptr[i] >= 9))
 		i++;
-	}
 	sign = 1;
-	while (nptr[i] == '+' || nptr[i] == '-')
+	if (nptr[i] == '+' || nptr[i] == '-')
 	{
-		if (nptr[i - 1] == '+' || nptr[i - 1] == '-')
-			return (0);
 		if (nptr[i] == '-')
-			sign = sign * (-1);
+			sign = -1;
 		i++;
 	}
-	digit = 0;
+	number = 0;
 	while (nptr[i] <= '9' && nptr[i] >= '0')
 	{
-		digit = digit * 10 + (nptr[i] - '0');
+		number = number * 10 + (nptr[i] - '0');
 		i++;
 	}
-	return (digit * sign);
+	return (number * sign);
 }
 
-// #include <stdio.h>
-// int	main(int argc, char *argv[])
-// {
-// 	if (argc != 2)
-// 		return (0);	
+/* #include <stdio.h>
+int	main(int argc, char *argv[])
+{
+	if (argc != 2)
+		return (0);	
 
-// 	printf("%d", ft_atoi(argv[1]));
-// 	return(0);
-// }
+	printf("%d", ft_atoi(argv[1]));
+	return(0);
+} */
