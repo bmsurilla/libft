@@ -34,7 +34,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void*))
 	}
 	return (lstcpy);
 }
-
+/*
 #include <stdio.h>
 
 void	ft_printtester(t_list *start)
@@ -65,7 +65,7 @@ static void	ft_del(void *content)
 	free(content);
 }
 
-/* int	main (void)
+ int	main (void)
 {
 	t_list	**start = NULL;
 	t_list	*node1 = NULL;

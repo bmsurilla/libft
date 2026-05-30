@@ -25,4 +25,3 @@ int	main(void)
 	int c = 'b';
 	printf("str: %c\n", (char)ft_toupper(c));
 } */
-	

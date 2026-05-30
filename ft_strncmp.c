@@ -26,3 +26,15 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
+/* #include <stdio.h>
+int	main(void)
+{
+	char	s1[] = "";
+	char	s2[] = "hello";
+	unsigned int	n;
+
+	n = 0;
+	printf("s1: %s\n", s1);
+	printf("s2: %s\n", s2);
+	printf("the difference is: %d\n", ft_strncmp(s1,s2,n));
+} */
